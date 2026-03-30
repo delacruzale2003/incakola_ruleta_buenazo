@@ -60,14 +60,14 @@ export default function SuccessView({ prize, storeName }: SuccessViewProps) {
         variants={itemVariants}
         src="/logoik.png" 
         alt="logoik" 
-        className="w-58 sm:w-66 h-auto object-contain mb-8"
+        className="w-61 sm:w-66 h-auto object-contain mb-8"
       />
 
       {/* 2. IMAGEN DEL PREMIO (Gigante) */}
       <motion.div 
         variants={itemVariants}
         // Aumenté el tamaño a w-80 h-80 (320px) para móviles y w-96 (384px) para PC
-        className="relative w-80 h-80 sm:w-96 sm:h-96 mb-12 flex items-center justify-center"
+        className="relative w-80 h-80 sm:w-96 sm:h-96 mb-5 flex items-center justify-center"
       >
         {prize?.image_url ? (
           <img 
@@ -83,11 +83,13 @@ export default function SuccessView({ prize, storeName }: SuccessViewProps) {
       </motion.div>
 
       {/* 3. Textos de instrucciones */}
-      <motion.div variants={itemVariants} className="space-y-3 w-full px-4">
-        <p className="text-[#1c3f8c] text-base sm:text-lg font-unity-headline leading-tight">
+      <motion.div variants={itemVariants} className="space-y-1 w-full px-4">
+        <p className="text-[#1c3f8c] text-base sm:text-lg font-unity-headline leading-none">
           Acércate al promotor y <br/> reclama tu premio
         </p>
-        
+        <br />
+        <br />
+        <p className='font-arpona-bold text-[#1c3f8c] leading-tight'>BUENAZO FEST <br />2026</p>
         
 
         {/* Nombre de la tienda como etiqueta discreta */}
