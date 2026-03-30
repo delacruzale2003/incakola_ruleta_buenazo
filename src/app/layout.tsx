@@ -13,13 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Fanta x Xbox",
-  description: "¡Participa en la promoción de Fanta x Xbox y gana increíbles premios!",
+  title: "Incakola Ruleta Buenazo",
+  description: "¡Gira la ruleta y gana premios increíbles con Incakola en el Buenazo Fest 2026! Participa en nuestra promoción exclusiva y descubre qué premio te espera. ¡No te lo pierdas!",
   // AGREGAMOS EL ICONO AQUÍ
   icons: {
-    icon: "/fantaicon.svg",
+    icon: "/favicon.svg",
     // Opcional: puedes agregar el apple-touch-icon si lo deseas
-    apple: "/fantaicon.svg",
+    apple: "/favicon.svg",
   },
 };
 
