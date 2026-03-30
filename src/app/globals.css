@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+/* 1. IMPORTACIÓN DE FUENTES (Asegúrate de tener los archivos en public/ o public/fonts/) */
+
+@font-face {
+  font-family: 'FantaPop';
+  src: url('/FantaPop-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moranga';
+  src: url('/Latinotype - Moranga Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Para MarkPro agrupamos ambas bajo la misma familia, separándolas por el peso (weight) */
+@font-face {
+  font-family: 'MarkPro';
+  src: url('/fonts/MarkPro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MarkPro';
+  src: url('/fonts/MARKPROBOLD.OTF') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'UnityHeadline';
+  src: url('/TCCC-UnityHeadline-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+/* NUEVA FUENTE: Arpona Bold */
+@font-face {
+  font-family: 'Arpona';
+  src: url('/Arpona-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 2. VARIABLES GLOBALES Y TEMA TAILWIND */
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  
+  /* Variables de fuentes personalizadas para Tailwind v4 */
+  --font-fantapop: 'FantaPop', sans-serif;
+  --font-moranga: 'Moranga', serif;
+  --font-markpro: 'MarkPro', sans-serif;
+  --font-arpona: 'Arpona', serif;
+  --font-unity-headline: 'UnityHeadline', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 3. CLASES PERSONALIZADAS */
+
+.font-fantapop {
+  font-family: 'FantaPop', sans-serif;
+}
+
+.font-moranga {
+  font-family: 'Moranga', serif;
+  font-weight: bold;
+}
+
+.font-markpro {
+  font-family: 'MarkPro', sans-serif;
+  font-weight: normal;
+}
+
+.font-markpro-bold {
+  font-family: 'MarkPro', sans-serif;
+  font-weight: bold;
+}
+
+/* NUEVA CLASE PARA ARPONA */
+.font-arpona-bold {
+  font-family: 'Arpona', serif;
+  font-weight: bold;
+}
+/* NUEVA CLASE PARA TCCC UNITY HEADLINE */
+.font-unity-headline {
+  font-family: 'UnityHeadline', sans-serif;
+  font-weight: normal;
+}
