@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
-import { Gift } from 'lucide-react'
+import { Gift, ArrowLeft } from 'lucide-react' // NUEVO: Importamos ArrowLeft
 import { motion, Variants } from 'framer-motion'
 
 // Animación para el contenedor principal
@@ -33,7 +33,7 @@ interface SuccessViewProps {
 
 export default function SuccessView({ prize, storeName }: SuccessViewProps) {
   
-  // NUEVO: Manejo del botón "Atrás" del celular
+  // Manejo del botón "Atrás" del celular
   useEffect(() => {
     // Agregamos un estado falso al historial
     window.history.pushState(null, '', window.location.href)
@@ -55,18 +55,17 @@ export default function SuccessView({ prize, storeName }: SuccessViewProps) {
       animate="visible"
     >
       
-      {/* 1. Logo Fanta x Xbox */}
+      {/* 1. Logo */}
       <motion.img 
         variants={itemVariants}
         src="/logoik.png" 
         alt="logoik" 
-        className="w-61 sm:w-66 h-auto object-contain mb-8"
+        className="w-64 sm:w-64 h-auto object-contain mb-8"
       />
 
       {/* 2. IMAGEN DEL PREMIO (Gigante) */}
       <motion.div 
         variants={itemVariants}
-        // Aumenté el tamaño a w-80 h-80 (320px) para móviles y w-96 (384px) para PC
         className="relative w-80 h-80 sm:w-96 sm:h-96 mb-5 flex items-center justify-center"
       >
         {prize?.image_url ? (
@@ -82,8 +81,8 @@ export default function SuccessView({ prize, storeName }: SuccessViewProps) {
         )}
       </motion.div>
 
-      {/* 3. Textos de instrucciones */}
-      <motion.div variants={itemVariants} className="space-y-1 w-full px-4">
+      {/* 3. Textos e instrucciones */}
+      <motion.div variants={itemVariants} className="space-y-1 w-full px-4 flex flex-col items-center">
         <p className="text-[#1c3f8c] text-base sm:text-lg font-unity-headline leading-none">
           Acércate al promotor y <br/> reclama tu premio
         </p>
@@ -91,9 +90,21 @@ export default function SuccessView({ prize, storeName }: SuccessViewProps) {
         <br />
         <p className='font-arpona-bold text-[#1c3f8c] leading-tight'>BUENAZO FEST <br />2026</p>
         
+        {/* NUEVO: Botón "Volver a participar" */}
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => window.location.reload()}
+          className="flex items-center justify-center gap-2 mt-8 mb-2 text-[#1c3f8c] opacity-90 hover:opacity-100 transition-opacity"
+        >
+          
+          <span className=" flex font-arpona-bold text-sm sm:text-base text-white uppercase tracking-wider translate-y-[2px] bg-[#1c3f8c] px-3 py-2 rounded-full">
+            <ArrowLeft size={20} strokeWidth={2.5} />Volver a participar
+          </span>
+        </motion.button>
 
         {/* Nombre de la tienda como etiqueta discreta */}
-        <div className="inline-block bg-black/20 text-white/80 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mt-4">
+        <div className="inline-block bg-black/10 text-black/60 px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider mt-2">
            {storeName}
         </div>
       </motion.div>
