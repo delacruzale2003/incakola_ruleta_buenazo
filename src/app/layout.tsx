@@ -17,9 +17,9 @@ export const metadata: Metadata = {
   description: "¡Gira la ruleta y gana premios increíbles con Incakola en el Buenazo Fest 2026! Participa en nuestra promoción exclusiva y descubre qué premio te espera. ¡No te lo pierdas!",
   // AGREGAMOS EL ICONO AQUÍ
   icons: {
-    icon: "/favicon.svg",
+    icon: "/favicon.png",
     // Opcional: puedes agregar el apple-touch-icon si lo deseas
-    apple: "/favicon.svg",
+    apple: "/favicon.png",
   },
 };
 

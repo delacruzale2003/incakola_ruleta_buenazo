@@ -28,7 +28,7 @@ export default function StoreHeader({ storeId }: StoreHeaderProps) {
     >
       <div className="rounded-[2rem] flex items-center justify-center mx-auto mb-1 overflow-hidden p-5">
         <motion.img 
-          src="/ikmain.png" 
+          src="/compressprizes.png" 
           alt="Fanta x Xbox Logo" 
           className="w-full h-full object-contain"
           animate={{ y: [-8, 8, -8] }}
